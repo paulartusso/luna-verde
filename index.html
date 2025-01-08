@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/void.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="https://kit.fontawesome.com/424ef3d923.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="#home" class="active tab-title">
+      <img src="./assets/solo-logo.png" alt="">
+    </a>
+    <div style="width: 50%;" class="links-container">
+      <div id="myLinks">
+        <a href="#who-we-are">Quienes Somos</a>
+        <a href="#experiences">Estancias</a>
+        <a href="#contacts">Contacto</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <section class="parallax">
+    <div class="logo-container">
+      <img src="./assets/logo.png" alt="logo" class="grow">
+    </div>
+  </section>
+
+  <div id="who-we-are">
+    <div class="title-container">
+      <h2>
+        Quienes Somos
+      </h2>
+      <img src="./assets/funghi.png" alt="" class="funghi">
+    </div>
+    <p class="section-description">
+      Somos un espacio en constante evolución, dedicado a crear un entorno auto sostenible que promueve la soberanía
+      alimentaria y el cuidado de la madre tierra. Ofrecemos un lugar para disfrutar de una vida más consciente y
+      sostenible,
+      inmerso en las hermosas montañas de Santa Elena. Aquí, puedes apreciar el arte y la naturaleza en su máxima
+      expresión.esta escapada única y tranquila.
+    </p>
+  </div>
+
+  <section class="parallax">
+    <div class="over-parallax">
+      <span>En este santuario de la sostenibilidad, el proceso no es solo un medio para un fin, sino una celebracion
+        continua. Aqui valoramos el proceso tanto como el resultado, reconociendo que cada paso cuenta en la
+        creacion
+        de un entorno armonioso.</span>
+    </div>
+  </section>
+
+  <section class="experiences-container">
+    <div class="title-container">
+      <h2>
+        Nuestras Estancias
+      </h2>
+      <img src="./assets/funghi.png" alt="" class="funghi">
+    </div>
+    <div id="experiences">
+      <div style="padding: 35px;">
+        <span>
+          Habitaciones en la Naturaleza Viva. Sumérgete en la serenidad de nuestras habitaciones, con vistas a las
+          montañas de
+          Santa Elena y naturaleza. Cada habitación cuenta con una decoración sencilla pero acogedora, utilizando
+          materiales
+          naturales que reflejan nuestro compromiso con el medio ambiente. El mobiliario, hecho a mano por artesanos
+          locales, te
+          invita a relajarte y desconectar del bullicio urbano.
+        </span>
+      </div>
+      <div class="separator"></div>
+      <div class="card green">
+        <div class="additional" style="background-image: url('../assets/cuarto-creciente.jpg');">
+          <div class="user-card">
+          </div>
+          <div class="more-info">
+            <h1>Cuarto Creciente</h1>
+            <button onclick="showRoomInfo('cuarto-creciente')">Ver Mas
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="general">
+          <h1>Cuarto Creciente</h1>
+          <p>Luminosa habitaciòn doble.</p>
+          <button>Ver Mas
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="card green">
+        <div class="additional" style="background-image: url('../assets/luna-llena-2.jpg');">
+          <div class="user-card">
+          </div>
+          <div class="more-info">
+            <h1>Luna Llena</h1>
+            <button>Ver Mas
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="general">
+          <h1>Luna Llena</h1>
+          <p>Habitacion doble, con ambientaciòn de Africa.</p>
+          <button>Ver Mas
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="card green">
+        <div class="additional" style="background-image: url('../assets/luna-nueva.jpg');">
+          <div class="user-card">
+            <!--in this div img-->
+
+          </div>
+          <div class="more-info">
+            <h1>Luna Nueva</h1>
+            <button>Ver Mas
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="general">
+          <h1>Luna Nueva</h1>
+          <p>Habitacion doble, con ambientaciones del reino fungi.</p>
+          <button>Ver Mas
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="card green">
+        <div class="additional" style="background-image: url('../assets/dinning.jpg');">
+          <div class="user-card">
+          </div>
+          <div class="more-info">
+            <h1>La Casa</h1>
+            <button>Ver Mas
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="general">
+          <h1>La Casa</h1>
+          <p>Tambièn puedes alquilar la casa completa.</p>
+          <button>Ver Mas
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="card green">
+        <div class="additional" style="background-image: url('../assets/exterior-2.jpg');">
+          <div class="user-card">
+
+          </div>
+          <div class="more-info">
+            <h1>Exteriores</h1>
+            <button>Ver Mas
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="general">
+          <h1>Exteriores</h1>
+          <p>Sumergete en el verde.</p>
+          <button>Ver Mas
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--modal room photos-->
+  <div id="gallery" class="overlay">
+    <div class="gallery-modal">
+      <div class="modal">
+        <div class="title-btn">
+          <img src="./assets/logo.png" alt="" width="40px">
+          <button onclick="closeRoomInfo()">x</button>
+        </div>
+        <div id="photos-container">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="half-hero">
+    <!--Section with paralax-->
+    <!--mobile styles-->
+    <div class="mobile-media">
+      <span>
+        Sìguenos en nuestras redes!
+      </span>
+      <div class="separator" style="margin-top: 20px;"></div>
+      <div class="icon-contact">
+        <a href="https://m.facebook.com/profile.php?id=100078764887358" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook icons flipping-icon" id="fb"></i>
+        </a>
+        <a href="https://www.instagram.com/lunaverde.ecohabitat/?igsh=MXVwOWFucmtsaHdjcA%3D%3D#" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram icons flipping-icon" id="instagram"></i>
+        </a>
+        <a href="https://es.airbnb.com/rooms/1261051009304791371?_set_bev_on_new_domain=1730240980_EAMzBhYWM0NjhkZW&source_impression_id=p3_1732892933_P37Yiu245rmPl0Tg"
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-airbnb icons flipping-icon" id="airbnb"></i>
+        </a>
+      </div>
+    </div>
+
+    <!--desktop styles-->
+    <div class="half-intrusive">
+      <div class="half-title">
+        <div class="second-box">
+          <span>
+            Sìguenos en nuestras redes!
+          </span>
+          <div class="icon-contact">
+            <a href="https://m.facebook.com/profile.php?id=100078764887358" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook icons flipping-icon" id="fb"></i>
+            </a>
+            <a href="https://www.instagram.com/lunaverde.ecohabitat/?igsh=MXVwOWFucmtsaHdjcA%3D%3D#" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram icons flipping-icon" id="instagram"></i>
+            </a>
+            <a href="https://es.airbnb.com/rooms/1261051009304791371?_set_bev_on_new_domain=1730240980_EAMzBhYWM0NjhkZW&source_impression_id=p3_1732892933_P37Yiu245rmPl0Tg"
+              target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-airbnb icons flipping-icon" id="airbnb"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="second-card-container" class="card-container">
+      <!--Second row of products-->
+    </div>
+  </section>
+
+
+  <footer id="contacts" class="footer">
+    <div class="title-container">
+      <h2>
+        Contacto
+      </h2>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+      <div class="contacts-container">
+        <!--container telefono + email-->
+        <div class="first-box">
+          <div class="icon-contact-container">
+            <img src="./assets/phone-call.png" alt="" width="20px">
+            Luna Verde: +57 313 7390575
+          </div>
+          <div class="icon-contact-container">
+            <img src="./assets/phone-call.png" alt="" width="20px">
+            Simoon: +57 300 3480931
+          </div>
+          <div class="icon-contact-container">
+            <img src="./assets/phone-call.png" alt="" width="20px">
+            Susana: +57 324 2310182
+          </div>
+          <div class="icon-contact-container">
+            <img src="./assets/email.png" alt="" width="22px">
+            lunaverdeecohabitat@gmail.com
+          </div>
+        </div>
+
+        <!--container google maps-->
+        <div class="maps-content">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4025847971866!2d-75.50047937552112!3d6.210514826722411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4427894cb46121%3A0xf576a3575d62f997!2sSanta%20Elena%2C%20Medell%C3%ADn%2C%20Dipartimento%20di%20Antioquia%2C%20Colombia!5e0!3m2!1ses!2ses!4v1729095149948!5m2!1ses!2ses"
+            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <a href="https://wa.me/+573003480931?text=Hola%21%20Quisiera%20información%20sobre%20las%20habitaciones."
+      target="_blank" rel="noopener noreferrer">
+      <button class="wpp-button">
+        <i class="fa-brands fa-whatsapp"></i>
+      </button>
+    </a>
+  </footer>
+
+  <script src="functions.js"></script>
+</body>
+
+</html>
