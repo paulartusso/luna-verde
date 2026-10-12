@@ -1,48 +1,44 @@
+// =============================================
+// LUNA VERDE — functions.js (improved)
+// =============================================
 
+const FALLBACK_IMG = './assets/logo.png'; // shown if a room photo 404s
 
-let igIcon = document.getElementById('instagram');
-let fbIcon = document.getElementById('fb');
-let rooms = [
-  {
-    name: 'cuarto-creciente',
-    imgs: [
-      '../assets/cuarto-creciente.jpg',
-      '../assets/cuarto-creciente.jpg',
-      '../assets/cuarto-creciente.jpg'
-    ]
-  }
-]
-
+// --- Mobile menu toggle ---
 function openMenu() {
-  let menu = document.getElementById("myLinks");
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
+  const menu = document.getElementById('myLinks');
+  const btn = document.querySelector('.topnav a.icon');
+  const isOpen = menu.classList.toggle('open');
+  if (btn) btn.setAttribute('aria-expanded', String(isOpen));
 }
 
-function showRoomInfo(room) {
-  let roomInfo = document.getElementById("gallery");
-  roomInfo.style.display = "block";
-  let roomPhotos = document.getElementById("room-photos");
-  let ul = document.createElement("ul")
-  roomPhotos.append(ul)
-  if (rooms.filter(item => item.name) == room) {
-    item.imgs //forEach create a li
-  }
-}
-
-function closeRoomInfo() {
-  let roomInfo = document.getElementById("gallery");
-  roomInfo.style.display = "none";
-  console.log("Room info closed.");
-}
-
-igIcon.addEventListener('click', function (event) {
-  igIcon.classList.add('flip')
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.getElementById('myLinks');
+  const links = menu.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      const btn = document.querySelector('.topnav a.icon');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  });
 });
 
-fbIcon.addEventListener('click', function (event) {
-  fbIcon.classList.add('flip')
+// --- Social icon flip animation ---
+document.querySelectorAll('.flipping-icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.classList.add('flip');
+    icon.addEventListener('animationend', () => icon.classList.remove('flip'), { once: true });
+  });
+});
+
+// --- Global image fallback for the whole page ---
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', () => {
+      if (img.src !== new URL(FALLBACK_IMG, location.href).href) {
+        img.src = FALLBACK_IMG;
+      }
+    }, { once: true });
+  });
 });

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna Verde Ecohabitat</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/room.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="room-body is-loading">
+  <!-- LOADER -->
+  <div id="loader" class="loader" role="status" aria-label="Cargando">
+    <div class="loader-stars" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="loader-scene" aria-hidden="true">
+      <div class="loader-orbit"><span></span></div>
+      <div class="loader-moon"></div>
+    </div>
+    <p class="loader-text">Luna Verde</p>
+    <p class="loader-sub">preparando la magia…</p>
+  </div>
+
+  <!-- NAV -->
+  <nav class="topnav">
+    <a href="index.html" class="tab-title">
+      <img src="./assets/solo-logo.png" alt="">
+      <span>Luna Verde</span>
+    </a>
+    <a href="index.html#experiences" class="back-link"><i class="fa-solid fa-arrow-left"></i> Estancias</a>
+  </nav>
+
+  <main class="room-page">
+    <!-- GALLERY -->
+    <section class="room-gallery" aria-label="Galería de fotos">
+      <div class="main-photo">
+        <img id="main-img" src="" alt="">
+        <button class="nav-btn prev" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="nav-btn next" aria-label="Foto siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+        <span class="photo-count" id="photo-count"></span>
+      </div>
+      <div class="thumbs" id="thumbs"></div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="room-info">
+      <span class="room-kicker">Nuestras Estancias</span>
+      <h1 id="room-title"></h1>
+      <div class="room-ornament" aria-hidden="true"></div>
+      <p class="room-tagline" id="room-tagline"></p>
+      <p class="room-description" id="room-description"></p>
+      <a class="room-cta" target="_blank" rel="noopener noreferrer" id="room-cta">
+        <i class="fa-brands fa-whatsapp"></i> Reservar por WhatsApp
+      </a>
+      <img src="./assets/funghi.png" alt="" class="funghi room-funghi">
+    </section>
+  </main>
+
+  <script src="loader.js"></script>
+  <script src="rooms.js"></script>
+  <script src="room.js"></script>
+</body>
+
+</html>

@@ -1,292 +1,144 @@
-.card {
-  height: 250px;
-  background-color: #fff;
-  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  margin: 1.5rem;
-}
+/* =============================================
+   LUNA VERDE — card.css
+   Room cards with arched "window" photos
+   ============================================= */
 
-@media screen and (max-width: 455px) {
-  .card {
-    width: 300px;
-  }
-}
-
-@media screen and (min-width: 456px) {
-  .card {
-    width: 450px;
-  }
-}
-
-.card h1 {
-  text-align: center;
-  color: #1D514C;
-}
-
-.card .additional {
-  position: absolute;
-  width: 150px;
-  height: 100%;
-  transition: width 0.4s;
-  overflow: hidden;
-  z-index: 2;
-}
-
-.card.green .additional {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-
-.card:hover .additional {
-  width: 100%;
-  border-radius: 0 5px 5px 0;
-}
-
-.card .additional .user-card {
-  width: 150px;
-  height: 100%;
-  position: relative;
-  float: left;
-}
-
-.card .additional .user-card::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 10%;
-  right: -2px;
-  height: 80%;
-  border-left: 2px solid rgba(0, 0, 0, 0.025);
-}
-
-.card .additional .user-card .level,
-.card .additional .user-card .points {
-  top: 15%;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.15);
-  padding: 0.125rem 0.75rem;
-  border-radius: 100px;
-  white-space: nowrap;
-}
-
-.card .additional .user-card .points {
-  top: 85%;
-}
-
-.card .additional .user-card svg {
-  top: 50%;
-}
-
-.card .additional .more-info {
-  float: left;
-  position: absolute;
-  left: 150px;
-  height: 100%;
-}
-
-.card .additional .more-info button {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #fff;
-  color: #306a66;
-  padding: 4px 7px 4px 7px;
+#experiences {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 36px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 112px;
+}
+
+.room-card {
+  flex: 1 1 200px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 22px;
+  border-radius: var(--radius-lg);
+  background-color: var(--white);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.45s var(--ease-float), box-shadow 0.45s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-8px) rotate(-0.8deg);
+  box-shadow: var(--shadow-lift);
+}
+
+.room-card:nth-child(even):hover {
+  transform: translateY(-8px) rotate(0.8deg);
+}
+
+.room-card-img {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--arch);
+  background-color: var(--green-pale);
+}
+
+.room-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-float);
+}
+
+.room-card:hover .room-card-img img {
+  transform: scale(1.07);
+}
+
+.room-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 110px;
-  cursor: pointer;
-
-  i {
-    font-family: "Font Awesome 5 Pro";
-    font-style: normal;
-    font-weight: 400;
-    color: #1D514C;
-    font-size: 11px;
-  }
+  gap: 6px;
+  padding: 0 8px;
+  text-align: center;
 }
 
-@media screen and (max-width: 455px) {
-  .card .additional .more-info {
-    width: 150px;
-  }
+.room-card h3 {
+  color: var(--green-dark);
+  font-size: 1.4rem;
 }
 
-@media screen and (min-width: 456px) {
-  .card .additional .more-info {
-    width: 300px;
-  }
+.room-card p {
+  flex: 1;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-mid);
 }
 
-.card .additional .more-info h1 {
-  color: #fff;
-  margin-bottom: 0;
+.see-more {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background-color: var(--green-pale);
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s, color 0.3s, gap 0.3s;
 }
 
-.card.green .additional .more-info h1 {
-  color: #FFF;
+.see-more i {
+  font-size: 0.75rem;
 }
 
-.card .additional .coords {
-  margin: 0 1rem;
-  color: #fff;
+.room-card:hover .see-more {
+  gap: 12px;
+  background-color: var(--green-dark);
+  color: var(--white);
+}
+
+/* --- Moon-phase badge sitting on the bottom of the arch --- */
+.phase {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  margin-bottom: 4px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px -4px rgba(29, 81, 76, 0.4);
+  color: var(--green-dark);
   font-size: 1rem;
 }
 
-.card.green .additional .coords {
-  color: #325C46;
+.phase::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
 }
 
-.card .additional .coords span+span {
-  float: right;
+.phase-waxing::before {
+  background-color: var(--green-dark);
+  box-shadow: inset -8px 0 0 var(--green-light);
 }
 
-.card .additional .stats {
-  font-size: 2rem;
-  display: flex;
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
-  top: auto;
-  color: #fff;
+.phase-full::before {
+  background-color: var(--green-light);
+  box-shadow: 0 0 10px var(--green-light);
 }
 
-.card.green .additional .stats {
-  color: #325C46;
+.phase-new::before {
+  background-color: var(--green-dark);
+  box-shadow: 0 0 0 2px var(--green-pale);
 }
 
-.card .additional .stats>div {
-  flex: 1;
-  text-align: center;
-}
-
-.card .additional .stats i {
-  display: block;
-}
-
-.card .additional .stats div.title {
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.card .additional .stats div.value {
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.5rem;
-}
-
-.card .additional .stats div.value.infinity {
-  font-size: 2.5rem;
-}
-
-.card .general {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  box-sizing: border-box;
-  padding: 1rem;
-  padding-top: 0;
-}
-
-.card .general button {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #fff;
-  color: #306a66;
-  padding: 4px 7px 4px 7px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 110px;
-
-  i {
-    font-family: "Font Awesome 5 Pro";
-    font-style: normal;
-    font-weight: 400;
-    color: #1D514C;
-    font-size: 11px;
-  }
-}
-
-@media screen and (max-width: 455px) {
-  .card .general {
-    width: 150px;
-  }
-}
-
-@media screen and (min-width: 456px) {
-  .card .general {
-    width: 300px;
-  }
-}
-
-.card .general .more {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 0.9em;
-}
-
-/*HIDDEN GALLERY*/
-#gallery {
+/* rooms that aren't a moon get an icon instead */
+.phase.icon-only::before {
   display: none;
-}
-
-.overlay {
-  background-color: #000000c1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1000;
-}
-
-.gallery-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.modal {
-  background-color: #FFF;
-  width: 70%;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.title-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  img {
-    margin-left: 40px;
-  }
-
-  button {
-    height: 40px;
-    width: 40px;
-    border: none;
-    border-radius: 50%;
-    margin-right: 40px;
-  }
 }

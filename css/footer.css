@@ -1,114 +1,80 @@
-/*************MOBILE*************/
-@media screen and (max-width: 599px) {
+/* =============================================
+   LUNA VERDE — footer.css
+   ============================================= */
 
-  .contacts-container {
-    background-color: #c3eae3;
-    padding: 15px 20px 15px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .first-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-}
-
-/*************WEB*************/
-@media screen and (min-width: 600px) {
-  .contacts-container {
-    background-color: #c3eae3;
-    width: 100%;
-    padding: 35px 20px 15px 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .first-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 35%;
-    padding-left: 5%;
-  }
-
-  .maps-content {
-    width: 65%;
-
-    iframe {
-      width: 100%;
-      height: 320px;
-    }
-  }
-
-}
-
-/******FOOTER*******/
 .footer {
-  background-color: #A2D4CA;
-  position: relative;
+  background-color: var(--green-pale);
+  overflow: hidden;
+}
+
+.contacts-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px 56px;
+}
+
+@media screen and (min-width: 700px) {
+  .contacts-container {
+    grid-template-columns: minmax(280px, 2fr) 3fr;
+  }
+}
+
+/* --- Contact info --- */
+.first-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background-color: var(--green-bg);
+  box-shadow: var(--shadow-soft);
 }
 
 .icon-contact-container {
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-size: 16px;
-
-  img {
-    margin-right: 10px;
-  }
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  overflow-wrap: anywhere;
 }
 
-.first-second {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+.icon-contact-container img {
+  flex-shrink: 0;
+  width: 20px;
+}
+
+/* highlighter-pen hover */
+.icon-contact-container a {
+  color: var(--green-dark);
+  font-weight: 600;
+  background-image: linear-gradient(var(--green-light), var(--green-light));
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+  background-size: 0 40%;
+  transition: background-size 0.35s var(--ease-float);
+}
+
+.icon-contact-container a:hover {
+  background-size: 100% 40%;
+}
+
+/* --- Map --- */
+.maps-content {
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.maps-content iframe {
+  display: block;
   width: 100%;
-  margin-bottom: 15px;
-}
-
-iframe {
-  border-radius: 9px;
-  -webkit-box-shadow: 0px 0px 19px -5px rgba(0, 29, 8, 0.7);
-  box-shadow: 0px 0px 19px -5px rgba(0, 29, 8, 0.7);
-}
-
-.wpp-button {
-  height: 50px;
-  width: 50px;
-  position: fixed;
-  bottom: 20px;
-  z-index: 1001;
-  border-radius: 50%;
-  border: 1px solid #306A66;
-  background-color: #FFF;
-  position: absolute;
-  box-shadow: 0px 0px 6px 0px #306A66;
-
-  i {
-    font-size: 25px;
-    color: #306A66;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .wpp-button {
-    right: 20px;
-  }
-}
-
-@media screen and (min-width: 501px) {
-  .wpp-button {
-    left: 20px;
-  }
+  height: 100%;
+  min-height: 260px;
+  border: 0;
 }
