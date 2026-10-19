@@ -7,6 +7,7 @@
   <title>Luna Verde Ecohabitat</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/products.css">
   <link rel="stylesheet" href="css/footer.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +39,7 @@
       <div id="myLinks">
         <a href="#who-we-are">Quiénes Somos</a>
         <a href="#experiences">Estancias</a>
+        <a href="#products">Productos</a>
         <a href="#contacts">Contacto</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="openMenu()" aria-label="Menu" aria-expanded="false">
@@ -90,7 +92,7 @@
     <div id="experiences">
       <a class="room-card" href="room.html?room=cuarto-creciente" target="_blank" rel="noopener">
         <div class="room-card-img">
-          <img src="./assets/cuarto-creciente.jpg" alt="Habitación Cuarto Creciente" loading="lazy">
+          <img src="./assets/cuarto-creciente-cover.jpg" alt="Habitación Cuarto Creciente" loading="lazy">
         </div>
         <div class="room-card-body">
           <span class="phase phase-waxing" aria-hidden="true"></span>
@@ -102,7 +104,7 @@
 
       <a class="room-card" href="room.html?room=luna-llena" target="_blank" rel="noopener">
         <div class="room-card-img">
-          <img src="./assets/luna-llena-2.jpg" alt="Habitación Luna Llena" loading="lazy">
+          <img src="./assets/luna-llena-cover.jpg" alt="Habitación Luna Llena" loading="lazy">
         </div>
         <div class="room-card-body">
           <span class="phase phase-full" aria-hidden="true"></span>
@@ -114,7 +116,7 @@
 
       <a class="room-card" href="room.html?room=luna-nueva" target="_blank" rel="noopener">
         <div class="room-card-img">
-          <img src="./assets/luna-nueva.jpg" alt="Habitación Luna Nueva" loading="lazy">
+          <img src="./assets/luna-nueva-cover.jpg" alt="Habitación Luna Nueva" loading="lazy">
         </div>
         <div class="room-card-body">
           <span class="phase phase-new" aria-hidden="true"></span>
@@ -126,7 +128,7 @@
 
       <a class="room-card" href="room.html?room=la-casa" target="_blank" rel="noopener">
         <div class="room-card-img">
-          <img src="./assets/dinning.jpg" alt="La Casa" loading="lazy">
+          <img src="./assets/common-spaces/full-view.jpg" alt="La Casa" loading="lazy">
         </div>
         <div class="room-card-body">
           <span class="phase icon-only" aria-hidden="true"><i class="fa-solid fa-house"></i></span>
@@ -138,7 +140,7 @@
 
       <a class="room-card" href="room.html?room=exteriores" target="_blank" rel="noopener">
         <div class="room-card-img">
-          <img src="./assets/exterior-2.jpg" alt="Exteriores" loading="lazy">
+          <img src="./assets/exterior/hammock.jpg" alt="Exteriores" loading="lazy">
         </div>
         <div class="room-card-body">
           <span class="phase icon-only" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
@@ -146,6 +148,60 @@
           <p>Sumérgete en el verde.</p>
           <span class="see-more">Ver más <i class="fa-solid fa-arrow-right"></i></span>
         </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products-section layer">
+    <div class="title-container">
+      <h2>Nuestros Productos <img src="./assets/funghi.png" alt="" class="funghi"></h2>
+    </div>
+    <p class="products-intro">
+      Productos elaborados por emprendedores de la zona. Fomentamos la economía circular:
+      <em>tejiendo en comunidad, crecemos como red.</em>
+    </p>
+
+    <div class="products-grid">
+      <article class="product-card">
+        <div class="product-photo" data-rotate>
+          <img src="./assets/products/guacamole-1.jpg" alt="Frasco de Guacamole Jalisco entre flores" class="active" loading="lazy">
+          <img src="./assets/products/guacamole-2.jpg" alt="Frasco de Guacamole Jalisco sostenido en la mano" loading="lazy">
+          <img src="./assets/products/guacamole-3.jpg" alt="Frasco de Guacamole Jalisco entre plantas" loading="lazy">
+          <img src="./assets/products/guacamole-4.jpg" alt="Textura del Guacamole Jalisco" loading="lazy">
+        </div>
+        <span class="product-tag"><i class="fa-solid fa-seedling"></i> By Luna Verde</span>
+        <h3>Guacamole Jalisco</h3>
+        <p>Guacamole artesanal, cremoso y fresco, hecho con aguacates de nuestra montaña.</p>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo">
+          <img src="./assets/products/helado-palta.jpg" alt="Helado de palta en palito" class="active" loading="lazy"
+            style="object-position: 60% 52%;">
+        </div>
+        <span class="product-tag"><i class="fa-solid fa-ice-cream"></i> Artesanal</span>
+        <h3>Helado de Palta</h3>
+        <p>Helado natural de aguacate, en forma de palta: suave, refrescante y lleno de sabor.</p>
+      </article>
+
+      <article class="product-card">
+        <div class="product-photo">
+          <img src="./assets/products/cerveza-presagio.jpg" alt="Tres botellas de cerveza artesanal Presagio" class="active"
+            loading="lazy" style="object-position: 50% 68%;">
+        </div>
+        <span class="product-tag"><i class="fa-solid fa-beer-mug-empty"></i> Cerveza local</span>
+        <h3>Cerveza Presagio</h3>
+        <p>Cerveza artesanal elaborada por productores vecinos de Santa Elena.</p>
+      </article>
+    </div>
+
+    <div class="seasonal-note">
+      <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+      <p>Pregunta por otros productos de temporada: varían según la cosecha del momento.</p>
+      <a href="https://wa.me/+573003480931?text=Hola%21%20%C2%BFQu%C3%A9%20productos%20de%20temporada%20tienen%3F"
+        target="_blank" rel="noopener noreferrer" class="seasonal-cta">
+        <i class="fa-brands fa-whatsapp"></i> Preguntar
       </a>
     </div>
   </section>
@@ -164,7 +220,7 @@
           aria-label="Instagram">
           <i class="fa-brands fa-instagram icons flipping-icon"></i>
         </a>
-        <a href="https://es.airbnb.com/rooms/1261051009304791371" target="_blank" rel="noopener noreferrer"
+        <a href="https://www.airbnb.com/rooms/1252493262262117353?" target="_blank" rel="noopener noreferrer"
           aria-label="Airbnb">
           <i class="fa-brands fa-airbnb icons flipping-icon"></i>
         </a>

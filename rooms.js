@@ -11,7 +11,7 @@ const rooms = [
     description:
       'Una habitación llena de luz natural, con cama doble y vistas a las montañas de Santa Elena. ' +
       'Decorada con materiales naturales para un descanso tranquilo y consciente.',
-    imgs: ['./assets/cuarto-creciente.jpg']
+    imgs: ['./assets/cuarto-creciente-2.jpg']
   },
   {
     name: 'luna-llena',
@@ -38,7 +38,7 @@ const rooms = [
     description:
       'Alquila la casa completa para tu grupo o familia: todas las habitaciones, cocina y zonas comunes ' +
       'para compartir en medio de la montaña.',
-    imgs: ['./assets/dinning.jpg']
+    imgs: ['./assets/common-spaces/bathroom.jpg', './assets/common-spaces/full-view.jpg', './assets/common-spaces/kitchen.jpg', './assets/common-spaces/utensils.jpg', ]
   },
   {
     name: 'exteriores',
@@ -47,6 +47,6 @@ const rooms = [
     description:
       'Jardines, huerta y el deck con vistas a las montañas. ' +
       'Espacios al aire libre para disfrutar del arte y la naturaleza en su máxima expresión.',
-    imgs: ['./assets/exterior-2.jpg', './assets/exterior.jpg', './assets/Deck.jpeg']
+    imgs: ['./assets/exterior/front-day.jpg', './assets/exterior/jacuzzi.webp', './assets/exterior/hammock.jpg', './assets/exterior/deck-side.jpg']
   }
 ];

@@ -42,3 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
   });
 });
+// --- Product photos with several images cross-fade on their own ---
+document.querySelectorAll('[data-rotate]').forEach(frame => {
+  const imgs = frame.querySelectorAll('img');
+  if (imgs.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let current = 0;
+  setInterval(() => {
+    imgs[current].classList.remove('active');
+    current = (current + 1) % imgs.length;
+    imgs[current].classList.add('active');
+  }, 3500);
+});
