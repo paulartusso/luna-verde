@@ -1,7 +1,3 @@
-// =============================================
-// LUNA VERDE — loader.js (shared page loader)
-// =============================================
-
 (() => {
   const MIN_SHOW = 900;  // ms — let the logo pulse at least once
   const MAX_SHOW = 4000; // ms — never hold the page hostage to a slow image

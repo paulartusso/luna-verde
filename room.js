@@ -1,6 +1,4 @@
-// =============================================
-// LUNA VERDE — room.js (room detail page)
-// =============================================
+//room detail page
 
 const FALLBACK_IMG = './assets/logo.png'; // shown if a room photo 404s
 
@@ -14,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  document.title = `${room.title} — Luna Verde Ecohabitat`;
+  document.title = `${room.title} - Luna Verde Ecohabitat`;
   document.getElementById('room-title').textContent = room.title;
   document.getElementById('room-tagline').textContent = room.tagline;
   document.getElementById('room-description').textContent = room.description;
@@ -66,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const swap = () => {
       mainImg.classList.remove('img-error');
       mainImg.src = room.imgs[current];
-      mainImg.alt = `${room.title} — foto ${current + 1}`;
+      mainImg.alt = `${room.title} - foto ${current + 1}`;
     };
     if (instant) {
       swap();

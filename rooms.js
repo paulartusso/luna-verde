@@ -1,8 +1,3 @@
-// =============================================
-// LUNA VERDE — rooms.js
-// Room data used by room.html (?room=<name>)
-// =============================================
-
 const rooms = [
   {
     name: 'cuarto-creciente',

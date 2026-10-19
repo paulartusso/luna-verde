@@ -1,6 +1,4 @@
-// =============================================
-// LUNA VERDE — functions.js (improved)
-// =============================================
+//functions.js (improved)
 
 const FALLBACK_IMG = './assets/logo.png'; // shown if a room photo 404s
 
