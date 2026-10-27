@@ -24,7 +24,7 @@ const rooms = [
     description:
       'Habitación doble ambientada en el mágico reino de los hongos. ' +
       'Ideal para desconectar y reconectar con la tierra.',
-    imgs: ['./assets/luna-nueva/luna-nueva-cover.jpg', './assets/luna-nueva/luna-nueva-1.jpeg']
+    imgs: ['./assets/luna-nueva/luna-nueva-cover.jpg']
   },
   {
     name: 'la-casa',
