@@ -552,7 +552,7 @@ button {
 			rgba(16, 22, 21, 0.05) 45%,
 			rgba(29, 81, 76, 0.45)
 		),
-		url("../assets/exterior/front-day.jpg");
+		url("../assets/exterior/hero.jpg");
 }
 
 .quote-parallax {
@@ -560,7 +560,7 @@ button {
 	padding: 72px 20px 104px;
 	background-image:
 		linear-gradient(rgba(29, 81, 76, 0.35), rgba(29, 81, 76, 0.35)),
-		url("../assets/exterior/ext.jpg");
+		url("../assets/exterior/sunset.jpg");
 }
 
 @media screen and (min-width: 700px) {
@@ -687,7 +687,7 @@ button {
 	justify-content: center;
 	background-image:
 		linear-gradient(rgba(29, 81, 76, 0.25), rgba(29, 81, 76, 0.25)),
-		url("../assets/exterior/ext.jpg");
+		url("../assets/exterior/sunset.jpg");
 	background-size: cover;
 	background-position: center;
 }
